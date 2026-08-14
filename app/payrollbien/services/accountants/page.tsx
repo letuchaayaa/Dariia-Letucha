@@ -1,0 +1,28 @@
+import ServicePage, { type ServiceConfig } from "../ServicePage";
+
+const config: ServiceConfig = {
+  eyebrow: "Accountants",
+  heroTitle: "Payroll Services for Accountants",
+  heroBody: "A flexible outsourced payroll partnership that helps accountancy practices grow without adding operational pressure.",
+  visionTitle: "A Smarter Payroll Partner for Accountants",
+  visionBody: "We work as an extension of your practice, managing every payroll with precision while protecting the trusted relationship you have built with your clients. Our specialists bring scalable capacity, technical expertise and responsive support.",
+  benefitsTitle: "Payroll Expertise That Strengthens Your Practice",
+  benefitsBody: "Give clients a consistently excellent payroll experience while your team stays focused on higher-value advisory work.",
+  benefits: [
+    { title: "More capacity", body: "Take on new payroll clients without recruiting and training an internal processing team.", icon: "/payrollbien-assets/value-quality.svg" },
+    { title: "Practice-led service", body: "A white-label partnership designed to feel like a natural part of your own firm.", icon: "/payrollbien-assets/value-reliability.svg" },
+    { title: "Reliable compliance", body: "Experienced specialists manage deadlines, RTI submissions and changing legislation.", icon: "/payrollbien-assets/value-transparency.svg" },
+    { title: "Clear communication", body: "Dedicated contacts keep your team and clients informed at every stage.", icon: "/payrollbien-assets/value-quality.svg" },
+  ],
+  detailsEyebrow: "Accountancy practices",
+  detailsTitle: "Everything You Need to Deliver Better Payroll",
+  details: [
+    { title: "Dedicated payroll team", body: "A consistent team learns your portfolio, preferred processes and service standards." },
+    { title: "Flexible onboarding", body: "We migrate individual clients or complete payroll books with minimal disruption." },
+    { title: "Secure online portal", body: "Approvals, reports and payroll records are available through a protected digital workspace." },
+  ],
+};
+
+export default function AccountantsPage() {
+  return <ServicePage config={config} />;
+}

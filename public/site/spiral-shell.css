@@ -1,0 +1,20 @@
+.spiral-site-header,
+.spiral-site-header .tower-identity,
+.spiral-site-header .tower-desktop-nav,
+.spiral-site-header .tower-menu-button {
+  color: #fff;
+}
+
+.spiral-site-header .tower-identity span {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.spiral-site-header {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 700px) {
+  .spiral-site-header .tower-identity span {
+    color: rgba(255, 255, 255, 0.65);
+  }
+}

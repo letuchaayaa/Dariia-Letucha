@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600&display=swap");
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+:root {
+  --site-font: "DM Sans", Arial, Helvetica, sans-serif;
+}
+
+html body,
+html body *,
+html body button,
+html body input,
+html body textarea,
+html body select,
+html body *::before,
+html body *::after {
+  font-family: var(--site-font) !important;
+  font-weight: 400;
+}
+
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  font-family: var(--site-font) !important;
+  font-weight: 600 !important;
+  letter-spacing: -3px !important;
+}
+
+html body .payrollbien-site,
+html body .payrollbien-site *,
+html body .payrollbien-site button,
+html body .payrollbien-site input,
+html body .payrollbien-site textarea,
+html body .payrollbien-site select,
+html body .payrollbien-site *::before,
+html body .payrollbien-site *::after {
+  font-family: var(--sans) !important;
+}
+
+html body .payrollbien-site h1,
+html body .payrollbien-site h2,
+html body .payrollbien-site h3,
+html body .payrollbien-site h4,
+html body .payrollbien-site h5,
+html body .payrollbien-site h6 {
+  font-family: var(--display) !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+.site-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #ffffff;
+}

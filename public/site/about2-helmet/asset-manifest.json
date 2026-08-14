@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "./static/css/main.63760b16.css",
+    "main.js": "./static/js/main.ee767855.js",
+    "static/media/OptimusPrincepsSemiBold.ttf": "./static/media/OptimusPrincepsSemiBold.69061516ffcdb2039c7f.ttf",
+    "static/media/OptimusPrinceps.ttf": "./static/media/OptimusPrinceps.20e6750830b534d901f0.ttf",
+    "index.html": "./index.html",
+    "main.63760b16.css.map": "./static/css/main.63760b16.css.map",
+    "main.ee767855.js.map": "./static/js/main.ee767855.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.63760b16.css",
+    "static/js/main.ee767855.js"
+  ]
+}
