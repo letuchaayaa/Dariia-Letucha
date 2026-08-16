@@ -1,0 +1,1 @@
+import{t as e}from"./server-D2atfEsx.js";var t=e(()=>{throw Error(`Unexpectedly client reference export 'default' is called on server`)},`c2e620b4b931`,`default`);export{t as default};

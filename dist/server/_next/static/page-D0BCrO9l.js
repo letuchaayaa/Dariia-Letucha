@@ -1,0 +1,1 @@
+import{t as e}from"./framework~index~page~page~layout~page~layout~page~page~page~page~page~app-page-cache-render~ge5gpv6m-5DChB3Lm.js";import{t}from"./HelmetExperience-CUCkRpxp.js";var n=e(),r={title:`Шлем — Dariia Letucha`,description:`Interactive project archive by Dariia Letucha.`};function i(){return(0,n.jsx)(t,{})}export{i as default,r as metadata};

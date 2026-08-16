@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services — Dariia Letucha</title>
+    <link rel="stylesheet" href="page.css" />
+    <link rel="stylesheet" href="services.css" />
+    <link rel="stylesheet" href="site-effects.css" />
+    <link rel="stylesheet" href="cursor.css" />
+    <script src="page.js" defer></script>
+    <script src="services.js" defer></script>
+    <script src="services-bubbles.js" defer></script>
+    <script src="services-horizontal.js" defer></script>
+    <script src="site-effects.js" defer></script>
+    <script src="cursor.js" defer></script>
+  </head>
+  <body class="services-page">
+    <header class="site-header">
+      <a class="identity" href="index.html" aria-label="Dariia Letucha, home">
+        <span>Full-Stack Designer</span>
+        <strong>Dariia Letucha</strong>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="services.html">What I do</a>
+        <a href="projects.html">Projects</a>
+        <a href="about-dark.html">About</a>
+          <a href="about-2.html">About 2</a>
+        <a href="lets-talk.html">Get in Touch</a>
+          <a href="second-page.html">Second Page</a>
+          <a href="third-page.html">Third Page</a>
+        <a href="index-light.html">Home Light</a>
+        <a href="services-light.html">What I do Light</a>
+        <a href="projects-light.html">Projects Light</a>
+        <a href="about-light.html">About Light</a>
+        <a href="lets-talk-light.html">Get in Touch Light</a>
+          <a href="#cv">CV</a>
+      </nav>
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+    </header>
+
+    <main>
+      <section class="Horizontal services-horizontal" data-horizontal-text aria-label="What I do introduction">
+        <div class="container services-horizontal__sticky">
+          <canvas class="services-bubbles" data-services-bubbles aria-hidden="true"></canvas>
+          <h1 class="Horizontal__text heading-xl" data-horizontal-line>
+            Create digital spaces where design, structure and brand personality work together.
+          </h1>
+        </div>
+      </section>
+
+      <section class="scope-section" aria-labelledby="scope-title">
+        <div class="scope-copy">
+          <p class="scope-label">Creative scope</p>
+          <h2 id="scope-title">Whether you need a website from scratch, a brand refresh or long-term design support, I can help turn your ideas into visuals that actually work.</h2>
+          <a class="inline-link scope-contact" href="lets-talk.html">Contact</a>
+        </div>
+
+        <div class="scope-accordion" data-accordion>
+          <article class="scope-item is-open">
+            <button type="button" aria-expanded="true">
+              <span>Web design</span>
+              <span class="scope-plus">+</span>
+            </button>
+            <div class="scope-panel">
+              <ul>
+                <li>E-commerce websites</li>
+                <li>Portfolio websites</li>
+                <li>UX/UI design</li>
+                <li>Figma layouts</li>
+              </ul>
+            </div>
+          </article>
+          <article class="scope-item">
+            <button type="button" aria-expanded="false">
+              <span>No code developer</span>
+              <span class="scope-plus">+</span>
+            </button>
+            <div class="scope-panel">
+              <ul>
+                <li>Wix</li>
+                <li>Readymag</li>
+                <li>Webflow</li>
+                <li>WordPress</li>
+                <li>Framer</li>
+                <li>Shopify</li>
+              </ul>
+            </div>
+          </article>
+          <article class="scope-item">
+            <button type="button" aria-expanded="false">
+              <span>Branding</span>
+              <span class="scope-plus">+</span>
+            </button>
+            <div class="scope-panel">
+              <ul>
+                <li>Brand identity</li>
+                <li>Logo design</li>
+                <li>Full branding systems</li>
+                <li>Long-term design support</li>
+              </ul>
+            </div>
+          </article>
+          <article class="scope-item">
+            <button type="button" aria-expanded="false">
+              <span>Frontend</span>
+              <span class="scope-plus">+</span>
+            </button>
+            <div class="scope-panel">
+              <ul>
+                <li>HTML and CSS build</li>
+                <li>Hosting and domain setup</li>
+                <li>Clean HTML/CSS file handoff</li>
+                <li>Interaction and animation</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="leaders-section" aria-labelledby="leaders-title">
+        <div class="leaders-sticky">
+          <div class="leaders-panel" aria-hidden="true"></div>
+          <h2 id="leaders-title">Driven by<br />leaders</h2>
+          <figure class="leaders-photo">
+            <img src="assets/dariia.png" alt="Dariia Letucha" />
+          </figure>
+          <div class="leader-badge badge-strangers"><img src="assets/logo-strangers.png" alt="Strangers and Pilgrims" /></div>
+          <div class="leader-badge badge-upwork"><img src="assets/logo-upwork.png" alt="Upwork" /></div>
+          <div class="leader-badge badge-travel"><img src="assets/logo-step-travel.png" alt="Step Travel" /></div>
+          <div class="leader-badge badge-school"><img src="assets/logo-it-step-school.png" alt="IT Step School" /></div>
+          <div class="leader-badge badge-academy"><img src="assets/logo-it-step-academy.png" alt="Step IT Academy" /></div>
+          <div class="leader-badge badge-stanislav"><img src="assets/logo-stanislav-step.png" alt="Stanislav Step School" /></div>
+          <div class="leader-badge badge-pifagor"><img src="assets/logo-pifagor.png" alt="Pifagor" /></div>
+          <div class="leader-badge badge-think"><img src="assets/logo-think-plan.png" alt="Think Plan Do Consulting" /></div>
+        </div>
+      </section>
+
+      <section class="services-contact" id="cv" aria-labelledby="services-contact-title">
+        <h2 id="services-contact-title">contact</h2>
+        <p class="available-note">I’m available for<br />freelance projects<br />worldwide</p>
+        <a class="contact-email inline-link" href="mailto:darialetucha@gmail.com">DARIALETUCHA@GMAIL.COM</a>
+        <img class="contact-block contact-block-left" src="assets/agronova-tape.png" alt="" />
+        <img class="contact-block contact-block-right" src="assets/agronova-billboard.png" alt="" />
+        <p class="long-note">I’m also considering long-term work with studios and companies, with the possibility of relocation or a hybrid work format.</p>
+      </section>
+    </main>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="services.html">What I do</a>
+      <a href="projects.html">Projects</a>
+      <a href="lets-talk.html">Get in Touch</a>
+          <a href="second-page.html">Second Page</a>
+          <a href="third-page.html">Third Page</a>
+        <a href="index-light.html">Home Light</a>
+        <a href="services-light.html">What I do Light</a>
+        <a href="projects-light.html">Projects Light</a>
+        <a href="about-light.html">About Light</a>
+        <a href="lets-talk-light.html">Get in Touch Light</a>
+          <a href="#cv">CV</a>
+    </nav>
+
+    <div class="menu-shell" id="mobile-menu" aria-hidden="true">
+      <button class="menu-backdrop" type="button" aria-label="Close menu"></button>
+      <section class="menu-panel" aria-label="Mobile navigation">
+        <button class="menu-close" type="button" aria-label="Close menu">×</button>
+        <div class="menu-identity">
+          <span>Full-Stack Designer</span>
+          <strong>Dariia Letucha</strong>
+        </div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="services.html">What I do</a>
+          <a href="projects.html">Projects</a>
+          <a href="about-dark.html">About</a>
+          <a href="about-2.html">About 2</a>
+          <a href="lets-talk.html">Get in Touch</a>
+          <a href="second-page.html">Second Page</a>
+          <a href="third-page.html">Third Page</a>
+        <a href="index-light.html">Home Light</a>
+        <a href="services-light.html">What I do Light</a>
+        <a href="projects-light.html">Projects Light</a>
+        <a href="about-light.html">About Light</a>
+        <a href="lets-talk-light.html">Get in Touch Light</a>
+          <a href="#cv">CV</a>
+        </nav>
+      </section>
+    </div>
+  </body>
+</html>

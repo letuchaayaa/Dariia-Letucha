@@ -1,0 +1,325 @@
+body {
+  background: rgb(10, 10, 10);
+  background-image:
+    linear-gradient(rgba(255,255,255,.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.07) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+.site-header {
+  color: #ffffff;
+}
+
+.site-header .identity span {
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.talk-page {
+  min-height: 100svh;
+  background: transparent;
+  color: #ffffff;
+}
+
+.talk-form-section {
+  position: relative;
+  display: grid;
+  min-height: 100svh;
+  padding: 74px clamp(110px, 8vw, 150px) 54px 20px;
+  overflow: hidden;
+  background: transparent;
+  grid-template-columns: minmax(260px, 37vw) minmax(500px, 840px);
+  grid-template-areas:
+    "title form"
+    "links form";
+  gap: clamp(52px, 7vw, 120px);
+  align-content: center;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.talk-form-bg {
+  position: relative;
+  z-index: 0;
+  grid-area: title;
+  display: grid;
+  margin: 0;
+  color: #ffffff;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-size: clamp(64px, 6.4vw, 124px);
+  font-weight: 500;
+  line-height: 0.84;
+  letter-spacing: var(--tracking);
+  pointer-events: none;
+  text-transform: none;
+}
+
+.talk-contact-pills {
+  position: relative;
+  z-index: 1;
+  grid-area: links;
+  display: flex;
+  align-self: end;
+  justify-self: start;
+  margin: 0;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.talk-contact-pills a {
+  display: inline-flex;
+  min-height: 34px;
+  padding: 0 14px;
+  align-items: center;
+  border-radius: 9px;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.76);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.talk-contact-pills .talk-email {
+  text-transform: lowercase;
+  font-size: 12px;
+  letter-spacing: 0;
+}
+
+.talk-contact-pills a:hover,
+.talk-contact-pills a:focus-visible {
+  background: var(--red);
+  color: #ffffff;
+}
+
+.talk-form {
+  position: relative;
+  z-index: 1;
+  grid-area: form;
+  display: grid;
+  width: min(840px, 100%);
+  gap: 15px;
+}
+
+.form-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.talk-form input,
+.talk-form textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 12px;
+  background: transparent;
+  color: #ffffff;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+}
+
+.talk-form input {
+  height: 56px;
+  padding: 0 17px;
+}
+
+.talk-form textarea {
+  min-height: 118px;
+  padding: 17px;
+  resize: vertical;
+}
+
+.talk-form input::placeholder,
+.talk-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  opacity: 1;
+}
+
+.service-title {
+  margin: 18px 0 3px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.service-grid {
+  display: grid;
+  width: min(610px, 100%);
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+  gap: 17px 64px;
+}
+
+.service-option {
+  position: relative;
+  display: grid;
+  grid-template-columns: 13px minmax(0, 1fr);
+  align-items: start;
+  gap: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.08;
+  white-space: nowrap;
+}
+
+.service-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.service-dot {
+  width: 12px;
+  height: 12px;
+  margin-top: 1px;
+  border: 1px solid rgba(255, 255, 255, 0.38);
+  border-radius: 50%;
+  background: transparent;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.service-option input:checked + .service-dot {
+  background: var(--red);
+  border-color: var(--red);
+  transform: scale(1.18);
+}
+
+.submit-row {
+  display: flex;
+  margin-top: 22px;
+  justify-content: flex-start;
+}
+
+.submit-button {
+  display: inline-grid;
+  width: 220px;
+  height: 56px;
+  place-items: center;
+  border-radius: 11px;
+  background: #ffffff;
+  color: rgb(10, 10, 10);
+  text-transform: none;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.submit-button::after {
+  display: none;
+}
+
+.submit-button:hover,
+.submit-button:focus-visible {
+  background: #2d2d2d;
+  color: #ffffff;
+}
+
+@media (max-width: 1150px) {
+  .talk-form-section {
+    padding-right: 28px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "form"
+      "links";
+    gap: 22px;
+    align-items: center;
+  }
+
+  body { background-size: 54px 54px; }
+
+  .talk-contact-pills {
+    order: 2;
+    align-self: center;
+    justify-content: flex-start;
+    margin: 10px 0 0;
+  }
+
+  .portfolio-dock { top: 10px; }
+}
+
+@media (max-width: 700px) {
+  .talk-form-section {
+    padding: 74px 5px 36px;
+    gap: 18px;
+  }
+
+  .talk-form-bg {
+    font-size: clamp(54px, 17vw, 78px);
+    line-height: .84;
+  }
+
+  .talk-contact-pills {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .talk-contact-pills a {
+    min-height: 32px;
+    padding: 0 11px;
+    font-size: 13px;
+  }
+
+  .field-row,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .talk-form {
+    gap: 12px;
+  }
+
+  .talk-form input {
+    height: 52px;
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .talk-form textarea {
+    min-height: 108px;
+    padding: 14px;
+    font-size: 14px;
+  }
+
+  .form-kicker,
+  .service-title,
+  .service-option,
+  .submit-button {
+    font-size: 14px;
+  }
+
+  .service-grid {
+    gap: 15px;
+  }
+
+  .service-option {
+    grid-template-columns: 12px minmax(0, 1fr);
+  }
+
+  .service-option-wide {
+    font-size: clamp(11px, 3.45vw, 14px);
+  }
+
+  .submit-row {
+    margin-top: 16px;
+  }
+
+  .submit-button {
+    width: 190px;
+    height: 52px;
+  }
+}

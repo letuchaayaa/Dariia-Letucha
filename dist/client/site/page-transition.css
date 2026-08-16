@@ -1,0 +1,30 @@
+.page-transition {
+  position: fixed;
+  z-index: 99999;
+  inset: 0;
+  overflow: hidden;
+  visibility: hidden;
+  background: rgba(255, 255, 255, 0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.page-transition canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.page-transition i { display: none; }
+
+.page-is-leaving .page-transition {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-is-leaving .page-transition { background: #fff; }
+  .page-transition canvas { display: none; }
+}
