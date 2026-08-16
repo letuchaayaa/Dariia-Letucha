@@ -4,7 +4,7 @@
 .projects-identity strong { font-weight: 400; }.projects-identity span { color: #777; }
 .projects-count { display: none; }
 
-.projects-title { position: absolute; z-index: 3; inset: 0; margin: 0; overflow: visible; color: rgb(10,10,10); font-family: "ZT Nature", Inter, sans-serif; font-size: clamp(72px, 6vw, 104px); font-weight: 700; line-height: .86; letter-spacing: -1.8px; pointer-events: none; }
+.projects-title { position: absolute; z-index: 3; inset: 0; margin: 0; overflow: visible; color: rgb(10,10,10); font-family: "ZT Nature", Inter, sans-serif; font-size: clamp(72px, 6vw, 104px); font-weight: 700; line-height: .86; letter-spacing: -2.3px; pointer-events: none; }
 .title-word { position: absolute; top: 50%; display: block; opacity: 0; clip-path: inset(-18% 100% -28% 0); transform: translate3d(var(--start-shift), -50%, 0); animation: title-write-split 710ms cubic-bezier(.2,1,.22,1) forwards; will-change: transform, opacity, clip-path; }
 .title-mine { right: calc(50% + 360px); left: auto; --start-shift: 250px; }
 .title-project { right: auto; left: calc(50% + 360px); --start-shift: -250px; }

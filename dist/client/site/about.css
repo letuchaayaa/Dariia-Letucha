@@ -165,6 +165,7 @@ img { display: block; width: 100%; }
   .leaders-stage > h2 { top: 8.5vh; width: 92vw; font-size: 8vw; white-space: normal; }
   .leader-logo { width: 20vw; max-width: 82px; aspect-ratio: 1; height: auto; padding: 9px; border: 1px solid rgba(255,255,255,.56); border-radius: 50%; background: rgba(3,15,35,.18); }
   .leader-logo img { width: 100%; max-height: 58px; object-fit: contain; }
+  .leader-logo--4 img { width: 72%; max-height: 46px; }
   .leader-logo--0 { top: 12%; right: auto; bottom: auto; left: 8%; }
   .leader-logo--1 { top: 12%; right: 8%; bottom: auto; left: auto; }
   .leader-logo--2 { top: 24%; right: auto; bottom: auto; left: 22%; }
