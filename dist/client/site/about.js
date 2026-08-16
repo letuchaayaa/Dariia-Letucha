@@ -165,12 +165,13 @@ const render = () => {
     const drop = range(p, .18, .23);
     const reveal = range(p, .28, .34);
     const mobileViewport = window.innerWidth <= 700;
-    const viewportScale = mobileViewport ? .68 : window.innerWidth <= 1180 ? .82 : 1;
+    const viewportScale = mobileViewport ? .62 : window.innerWidth <= 1180 ? .82 : 1;
     const leaderScale = mobileViewport
-      ? 1 + range(p, .78, .85) * .2
+      ? 1 - range(p, .78, .85) * .08
       : 1 - range(p, .78, .85) * .5;
     helmetFrame.style.opacity = String(drop);
-    helmetFrame.style.transform = `translateY(${(1 - drop) * -42}vh) scale(${(.92 + drop * .08) * viewportScale * leaderScale})`;
+    const helmetY = (1 - drop) * -42 + (mobileViewport ? drop * 5 : 0);
+    helmetFrame.style.transform = `translateY(${helmetY}vh) scale(${(.92 + drop * .08) * viewportScale * leaderScale})`;
     skyVideo.style.opacity = String(reveal);
     skyVideo.style.transform = `scale(${1.08 - reveal * .08})`;
     if (skyShade) skyShade.style.opacity = String(reveal);

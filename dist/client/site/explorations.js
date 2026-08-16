@@ -20,10 +20,11 @@
     const available = Math.max(1, scene.offsetHeight - window.innerHeight);
     const progress = clamp((window.scrollY - scene.offsetTop) / available);
 
-    const depart = ease(clamp((progress - .86) / .11));
+    const mobile = window.innerWidth <= 700;
+    const depart = ease(clamp((progress - (mobile ? .82 : .86)) / (mobile ? .16 : .11)));
     images.forEach((image, index) => {
       const delay = (rank.get(index) || 0) * 0.012;
-      const local = ease(clamp((progress - .08 - delay) / .5));
+      const local = ease(clamp((progress - .08 - delay) / (mobile ? .42 : .5)));
       const hidden = 1 - local;
       const columns = window.innerWidth <= 700 ? 4 : 5;
       const column = index % columns;
