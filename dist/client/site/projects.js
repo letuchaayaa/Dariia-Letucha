@@ -48,7 +48,7 @@ let pointerStartX = 0;
 let pointerStartY = 0;
 let pointerHandled = false;
 let activePointer = null;
-let suppressClickUntil = 0;
+let suppressDragClick = false;
 
 const renderStack = () => {
   const slots = window.innerWidth <= 700 ? mobileSlots : window.innerWidth <= 1180 ? tabletSlots : desktopSlots;
@@ -113,7 +113,7 @@ stack.addEventListener("pointermove", (event) => {
   if (pointerHandled || wheelLock || Math.max(Math.abs(deltaX), Math.abs(deltaY)) < 38) return;
 
   pointerHandled = true;
-  suppressClickUntil = performance.now() + 500;
+  suppressDragClick = true;
   wheelLock = true;
   cycle(Math.abs(deltaY) >= Math.abs(deltaX) ? (deltaY < 0 ? 1 : -1) : (deltaX < 0 ? 1 : -1));
   window.setTimeout(() => {
@@ -125,11 +125,14 @@ const finishPointer = (event) => {
   if (activePointer !== event.pointerId) return;
   activePointer = null;
   pointerHandled = false;
+  window.setTimeout(() => {
+    suppressDragClick = false;
+  }, 0);
 };
 stack.addEventListener("pointerup", finishPointer);
 stack.addEventListener("pointercancel", finishPointer);
 stack.addEventListener("click", (event) => {
-  if (performance.now() < suppressClickUntil) event.preventDefault();
+  if (suppressDragClick) event.preventDefault();
 }, true);
 
 window.addEventListener("resize", renderStack);
