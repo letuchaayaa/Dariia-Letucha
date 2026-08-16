@@ -198,21 +198,21 @@ const render = () => {
       letter.style.transform = `translate3d(${x}px, ${y}px, ${z}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg) scaleY(${flatten})`;
     });
     serviceCards.forEach((card, index) => {
-      const start = .58 + index * .035;
-      const arrival = range(p, start, start + .04);
-      const easedArrival = 1 - Math.pow(1 - arrival, 3);
-      const exit = range(p, .75, .8);
-      const easedExit = exit * exit * (3 - 2 * exit);
       const compact = window.innerWidth <= 700;
+      const start = compact ? .53 + index * .065 : .58 + index * .035;
+      const arrival = range(p, start, start + (compact ? .055 : .04));
+      const easedArrival = 1 - Math.pow(1 - arrival, 3);
+      const exit = range(p, compact ? .82 : .75, compact ? .87 : .8);
+      const easedExit = exit * exit * (3 - 2 * exit);
       const fromY = compact ? -125 - index * 12 : index % 2 === 0 ? -115 : 115;
       const fromX = compact ? 0 : 42;
       card.style.opacity = String(range(arrival, .05, .55) * (1 - range(exit, .76, 1)));
       card.style.transform = `translate3d(${(1 - easedArrival) * fromX - easedExit * 140}vw, ${(1 - easedArrival) * fromY}vh, 0)`;
     });
-    if (leadersStage) leadersStage.style.opacity = String(range(p, mobileViewport ? .78 : .79, mobileViewport ? .8 : .84));
+    if (leadersStage) leadersStage.style.opacity = String(range(p, mobileViewport ? .86 : .79, mobileViewport ? .89 : .84));
     leaderLogos.forEach((logo, index) => {
-      const start = mobileViewport ? .8 + index * .025 : .83 + index * .019;
-      const arrival = range(p, start, start + (mobileViewport ? .018 : .02));
+      const start = mobileViewport ? .885 + index * .012 : .83 + index * .019;
+      const arrival = range(p, start, start + (mobileViewport ? .026 : .02));
       const easedArrival = 1 - Math.pow(1 - arrival, 3);
       logo.style.opacity = String(arrival);
       logo.style.transform = `translateY(${(1 - easedArrival) * 44}px) scale(${.72 + easedArrival * .28})`;

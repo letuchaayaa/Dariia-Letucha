@@ -44,6 +44,11 @@ let active = 0;
 let wheelLock = false;
 let wheelRemainder = 0;
 let wheelResetTimer = 0;
+let pointerStartX = 0;
+let pointerStartY = 0;
+let pointerHandled = false;
+let activePointer = null;
+let suppressClickUntil = 0;
 
 const renderStack = () => {
   const slots = window.innerWidth <= 700 ? mobileSlots : window.innerWidth <= 1180 ? tabletSlots : desktopSlots;
@@ -92,6 +97,40 @@ stack.addEventListener(
   },
   { passive: false },
 );
+
+stack.addEventListener("pointerdown", (event) => {
+  activePointer = event.pointerId;
+  pointerStartX = event.clientX;
+  pointerStartY = event.clientY;
+  pointerHandled = false;
+  stack.setPointerCapture?.(event.pointerId);
+});
+
+stack.addEventListener("pointermove", (event) => {
+  if (activePointer !== event.pointerId) return;
+  const deltaX = event.clientX - pointerStartX;
+  const deltaY = event.clientY - pointerStartY;
+  if (pointerHandled || wheelLock || Math.max(Math.abs(deltaX), Math.abs(deltaY)) < 38) return;
+
+  pointerHandled = true;
+  suppressClickUntil = performance.now() + 500;
+  wheelLock = true;
+  cycle(Math.abs(deltaY) >= Math.abs(deltaX) ? (deltaY < 0 ? 1 : -1) : (deltaX < 0 ? 1 : -1));
+  window.setTimeout(() => {
+    wheelLock = false;
+  }, 560);
+});
+
+const finishPointer = (event) => {
+  if (activePointer !== event.pointerId) return;
+  activePointer = null;
+  pointerHandled = false;
+};
+stack.addEventListener("pointerup", finishPointer);
+stack.addEventListener("pointercancel", finishPointer);
+stack.addEventListener("click", (event) => {
+  if (performance.now() < suppressClickUntil) event.preventDefault();
+}, true);
 
 window.addEventListener("resize", renderStack);
 renderStack();

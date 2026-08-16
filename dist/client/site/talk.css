@@ -254,7 +254,7 @@ body {
 
 @media (max-width: 700px) {
   .talk-form-section {
-    padding: 74px 5px 36px;
+    padding: 74px 15px 36px;
     gap: 18px;
   }
 
